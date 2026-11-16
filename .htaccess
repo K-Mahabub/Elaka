@@ -1,0 +1,8 @@
+Options -Indexes
+<FilesMatch "^(config\.php|schema\.sql|cron\.php|README\.md)$">
+    Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^includes/ - [F,L]
+</IfModule>
